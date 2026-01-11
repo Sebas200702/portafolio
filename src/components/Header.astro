@@ -1,0 +1,92 @@
+---
+// Header Component - Navigation
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+        Portafolio
+      </a>
+      
+      <ul class="hidden md:flex space-x-8">
+        <li>
+          <a href="#inicio" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="#sobre-mi" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Sobre Mí
+          </a>
+        </li>
+        <li>
+          <a href="#proyectos" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Proyectos
+          </a>
+        </li>
+        <li>
+          <a href="#habilidades" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Habilidades
+          </a>
+        </li>
+        <li>
+          <a href="#contacto" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Contacto
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile menu button -->
+      <button 
+        id="mobile-menu-button"
+        class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <ul class="flex flex-col space-y-4">
+        <li>
+          <a href="#inicio" class="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="#sobre-mi" class="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Sobre Mí
+          </a>
+        </li>
+        <li>
+          <a href="#proyectos" class="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Proyectos
+          </a>
+        </li>
+        <li>
+          <a href="#habilidades" class="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Habilidades
+          </a>
+        </li>
+        <li>
+          <a href="#contacto" class="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
